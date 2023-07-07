@@ -1,0 +1,31 @@
+.hnt-home-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    gap: 25%;
+}
+
+.hnt-home-container a {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hnt-home-link {
+    height: 60px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.hnt-link-create {
+    background-color: #3F80FF;
+}
+
+.hnt-link-view {
+    background-color: #1E4186;
+}

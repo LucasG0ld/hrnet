@@ -1,0 +1,10 @@
+.hnt-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px;
+    align-items: center;
+}
+
+.hnt-form-btn {
+    text-align: center;
+}

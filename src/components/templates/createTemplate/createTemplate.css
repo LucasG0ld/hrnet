@@ -1,0 +1,19 @@
+.hnt-create-template {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.hnt-create-button {
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    background: #3F80FF;
+    color: white;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 60px;
+    cursor: pointer;
+}

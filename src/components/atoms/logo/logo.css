@@ -1,0 +1,22 @@
+.hnt-container-logo {
+    width: 490px;
+    height: 140px;
+    background-color: white;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hnt-logo-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    color: #1E4186;
+    letter-spacing: 0.3em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
