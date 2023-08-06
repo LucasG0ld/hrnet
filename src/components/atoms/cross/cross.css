@@ -10,3 +10,8 @@
     align-items: center;
     transform: translate(50%, -50%);
 }
+
+.hnt-cross-container img {
+    width: 34px;
+    height: 34px;
+}

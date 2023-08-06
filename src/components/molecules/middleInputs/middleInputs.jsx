@@ -1,275 +1,271 @@
-import React, { useContext } from 'react';
-import { FormDataContext } from '../../../context/formDataContext';
+import React from 'react';
 import InputLabel from "../inputLabel/inputLabel";
 import SelectInputLabel from "../selectInputLabel/selectInputLabel";
 import "./middleInputs.css"
 
+// Ce composant représente une section contenant des champs de saisie de texte et un champ de sélection réutilisables pour l'adresse.
+
+// Données :
+// - Le composant utilise un tableau d'objets "options" pour les choix de l'état dans le champ de sélection.
+// - Chaque objet dans le tableau "options" a une "value" et un "label" pour la valeur et l'étiquette de l'option.
+
+// Fonctionnement :
+// - Le composant rend une div contenant des champs de saisie de texte et un champ de sélection réutilisables pour l'adresse.
+// - Les champs de saisie de texte sont créés en utilisant le composant moléculaire "InputLabel".
+// - Le champ de sélection est créé en utilisant le composant moléculaire "SelectInputLabel".
+// - Chaque champ de saisie de texte et de sélection est configuré avec une étiquette associée (label) et un ID unique pour l'attribut "htmlFor".
+// - Le champ de sélection est configuré avec les options définies dans le tableau "options".
+
 const options = [
     {
-        value: "alabama",
-        label: "Alabama"
+        value: "AL",
+        label: "Alabama",
     },
     {
-        value: "alaska",
-        label: "Alaska"
+        value: "AK",
+        label: "Alaska",
     },
     {
-        value: "americanSamoa",
-        label: "American Samoa"
+        value: "AS",
+        label: "American Samoa",
     },
     {
-        value: "arizona",
-        label: "Arizona"
+        value: "AZ",
+        label: "Arizona",
     },
     {
-        value: "arkansas",
-        label: "Arkansas"
+        value: "AR",
+        label: "Arkansas",
     },
     {
-        value: "california",
-        label: "California"
+        value: "CA",
+        label: "California",
     },
     {
-        value: "colorado",
-        label: "Colorado"
+        value: "CO",
+        label: "Colorado",
     },
     {
-        value: "connecticut",
-        label: "Connecticut"
+        value: "CT",
+        label: "Connecticut",
     },
     {
-        value: "delaware",
-        label: "Delaware"
+        value: "DE",
+        label: "Delaware",
     },
     {
-        value: "districtOfColumbia",
-        label: "District Of Columbia"
+        value: "DC",
+        label: "District Of Columbia",
     },
     {
-        value: "federatedStatesOfMicronesia",
+        value: "FM",
         label: "Federated States Of Micronesia"
     },
     {
-        value: "florida",
+        value: "FL",
         label: "Florida"
     },
     {
-        value: "georgia",
+        value: "GA",
         label: "Georgia"
     },
     {
-        value: "guam",
+        value: "GU",
         label: "Guam"
     },
     {
-        value: "hawaii",
+        value: "HI",
         label: "Hawaii"
     },
     {
-        value: "idaho",
+        value: "ID",
         label: "Idaho"
     },
     {
-        value: "illinois",
+        value: "IL",
         label: "Illinois"
     },
     {
-        value: "indiana",
+        value: "IN",
         label: "Indiana"
     },
     {
-        value: "iowa",
+        value: "IA",
         label: "Iowa"
     },
     {
-        value: "kansas",
+        value: "KS",
         label: "Kansas"
     },
     {
-        value: "kentucky",
+        value: "KY",
         label: "Kentucky"
     },
     {
-        value: "louisiana",
+        value: "LA",
         label: "Louisiana"
     },
     {
-        value: "maine",
+        value: "ME",
         label: "Maine"
     },
     {
-        value: "marshallIslands",
+        value: "MH",
         label: "Marshall Islands"
     },
     {
-        value: "maryland",
+        value: "MD",
         label: "Maryland"
     },
     {
-        value: "massachusetts",
+        value: "MA",
         label: "Massachusetts"
     },
     {
-        value: "michigan",
+        value: "MI",
         label: "Michigan"
     },
     {
-        value: "minnesota",
+        value: "MN",
         label: "Minnesota"
     },
     {
-        value: "mississippi",
+        value: "MS",
         label: "Mississippi"
     },
     {
-        value: "missouri",
+        value: "MO",
         label: "Missouri"
     },
     {
-        value: "montana",
+        value: "MT",
         label: "Montana"
     },
     {
-        value: "nebraska",
+        value: "NE",
         label: "Nebraska"
     },
     {
-        value: "nevada",
+        value: "NV",
         label: "Nevada"
     },
     {
-        value: "newHampshire",
+        value: "NH",
         label: "New Hampshire"
     },
     {
-        value: "newJersey",
+        value: "NJ",
         label: "New Jersey"
     },
     {
-        value: "newMexico",
+        value: "NM",
         label: "New Mexico"
     },
     {
-        value: "newYork",
+        value: "NY",
         label: "New York"
     },
     {
-        value: "northCarolina",
+        value: "NC",
         label: "North Carolina"
     },
     {
-        value: "northDakota",
+        value: "ND",
         label: "North Dakota"
     },
     {
-        value: "northernMarianaIslands",
+        value: "MP",
         label: "Northern Mariana Islands"
     },
     {
-        value: "ohio",
+        value: "OH",
         label: "Ohio"
     },
     {
-        value: "oklahoma",
+        value: "OK",
         label: "Oklahoma"
     },
     {
-        value: "oregon",
+        value: "OR",
         label: "Oregon"
     },
     {
-        value: "palau",
+        value: "PW",
         label: "Palau"
     },
     {
-        value: "pennsylvania",
+        value: "PA",
         label: "Pennsylvania"
     },
     {
-        value: "puertoRico",
+        value: "PR",
         label: "Puerto Rico"
     },
     {
-        value: "rhodeIsland",
+        value: "RI",
         label: "Rhode Island"
     },
     {
-        value: "southCarolina",
+        value: "SC",
         label: "South Carolina"
     },
     {
-        value: "southDakota",
+        value: "SD",
         label: "South Dakota"
     },
     {
-        value: "tennessee",
+        value: "TN",
         label: "Tennessee"
     },
     {
-        value: "texas",
+        value: "TX",
         label: "Texas"
     },
     {
-        value: "utah",
+        value: "UT",
         label: "Utah"
     },
     {
-        value: "vermont",
+        value: "VT",
         label: "Vermont"
     },
     {
-        value: "virginIslands",
+        value: "VI",
         label: "Virgin Islands"
     },
     {
-        value: "virginia",
+        value: "VA",
         label: "Virginia"
     },
     {
-        value: "washington",
+        value: "WA",
         label: "Washington"
     },
     {
-        value: "westVirginia",
+        value: "WV",
         label: "West Virginia"
     },
     {
-        value: "wisconsin",
+        value: "WI",
         label: "Wisconsin"
     },
     {
-        value: "wyoming",
+        value: "WY",
         label: "Wyoming"
     }
 ]
 
 function MiddleInputs() {
-    const { updateFormData } = useContext(FormDataContext);
-
-    const handleInputChange = (e) => {
-        const { id, value } = e.target;
-        updateFormData((prevFormData) => ({
-            ...prevFormData,
-            [id]: value
-        }));
-    };
-
-    const handleSelectChange = (id, selectedValue) => {
-        updateFormData((prevFormData) => ({
-            ...prevFormData,
-            [id]: selectedValue
-        }));
-    };
 
     return (
         <div className="hnt-middle-border">
             <div className="hnt-address-container">
                 <p className="hnt-label hnt-address">Address</p>
             </div>
-            <InputLabel htmlFor="street" label="Street" id="street" onChange={handleInputChange}></InputLabel>
-            <InputLabel htmlFor="city" label="City" id="city" onChange={handleInputChange}></InputLabel>
-            <SelectInputLabel htmlFor="state" label="State" id="state" options={options} onChange={handleSelectChange}></SelectInputLabel>
-            <InputLabel htmlFor="zip-code" label="Zip Code" id="zipCode" onChange={handleInputChange}></InputLabel>
+            <InputLabel htmlFor="street" label="Street" id="street" name="street" verificationMessage="Please, enter your street."></InputLabel>
+            <InputLabel htmlFor="city" label="City" id="city" name="city" verificationMessage="Please, enter your city."></InputLabel>
+            <SelectInputLabel htmlFor="state" label="State" id="state" options={options} name="state" verificationMessage="Please, select your state."></SelectInputLabel>
+            <InputLabel htmlFor="zip-code" label="Zip Code" id="zipCode" name="zipCode" verificationMessage="Please, enter your zip code."></InputLabel>
         </div>
     );
 }
