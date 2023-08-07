@@ -1,4 +1,4 @@
-# HRNET - Application ReactJS
+# HRNET - Ajout d'emplyés
 
 ## Bienvenue dans ce projet.
 Ici vous trouverez une application web, réalisée avec ReactJS. Elle permet aux utilisateurs d'enregistrer de nouveaux employés via un formulaire intuitif. Les informations saisies, telles que prénom, nom, date de début, adresse, département, etc., sont stockées à la fois dans le contexte de l'application et dans le localstorage du navigateur. Les employés enregistrés peuvent être consultés et gérés sur une page de tableau.
@@ -18,7 +18,7 @@ Vous pouvez accéder à l'application en ligne via l'URL suivant : https://sunny
 - react-datepicker
 - g0ld-modal
 
-## Comment Utiliser
+## Comment utiliser
 1. Clonez ce repository sur votre ordinateur en utilisant la commande `git clone https://github.com/LucasG0ld/hrnet`.
 2. Installez les dépendances en utilisant la commande : `npm install`.
 3. Démarrez l'application avec la commande : `npm run dev`.
