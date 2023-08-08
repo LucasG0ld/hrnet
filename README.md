@@ -1,4 +1,4 @@
-# HRNET - Ajout d'emplyés
+# HRNET - Ajout d'employés
 
 ## Bienvenue dans ce projet.
 Ici vous trouverez une application web, réalisée avec ReactJS. Elle permet aux utilisateurs d'enregistrer de nouveaux employés via un formulaire intuitif. Les informations saisies, telles que prénom, nom, date de début, adresse, département, etc., sont stockées à la fois dans le contexte de l'application et dans le localstorage du navigateur. Les employés enregistrés peuvent être consultés et gérés sur une page de tableau.
